@@ -88,7 +88,7 @@ export default function App() {
     setIsMuted(!isMuted);
   };
 
-  const shareText = encodeURIComponent("🎉 I just won the Cysic Team Flip memory game! You too can play, show us how well you know the @cysic_xyz team:");
+  const shareText = encodeURIComponent("🎉🧠I just crushed the Cysic Team Flip memory game, Think you know the @cysic_xyz team better than I do? Prove it. 🎮 Let’s see how sharp your memory really is.");
   const shareURL = encodeURIComponent("https://cysic-teammatch.vercel.app");
   const tweetLink = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareURL}`;
 
