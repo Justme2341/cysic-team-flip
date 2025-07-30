@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 const agentPool = [
-  { name: "@andrewxhill", image: "/agent1.png" },
-  { name: "@carsonfarmer", image: "/agent2.png" },
-  { name: "@dataliquidity", image: "/agent3.png" },
-  { name: "@dazuck", image: "/agent4.png" },
-  { name: "@hey_kso", image: "/agent5.png" },
-  { name: "@MsEggmily", image: "/agent6.png" },
-  { name: "@TheDerrek", image: "/agent7.png" }
+  { name: "@leofanxiong", image: "/agent1.png" },
+  { name: "@5herv1n", image: "/agent2.png" },
+  { name: "@pulse327", image: "/agent3.png" },
+  { name: "@JOPI_pinging", image: "/agent4.png" },
+  { name: "@RaeWrh", image: "/agent5.png" },
+  { name: "@AlexCooperFPA", image: "/agent6.png" },
+  { name: "@C0URTJESTR", image: "/agent7.png" },
+  { name: "@cysic_janitor", image: "/agent8.png" }
 ];
 
 function shuffleAgents() {
@@ -38,7 +39,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (matched.length === 14) {
+    if (matched.length === 16) {
       setHasWon(true);
       if (!isMuted) winSound.play();
       import("canvas-confetti").then((module) => {
@@ -87,8 +88,8 @@ export default function App() {
     setIsMuted(!isMuted);
   };
 
-  const shareText = encodeURIComponent("🎉 I just WON the @recallnet Team Flip memory game! You can play it here and show us how well you can recall the @recallnet team:");
-  const shareURL = encodeURIComponent("https://recall-teammatch.vercel.app");
+  const shareText = encodeURIComponent("🎉 I just won the Cysic Team Flip memory game! You too can play, show us how well you know the @cysic_xyz team:");
+  const shareURL = encodeURIComponent("https://cysic-teammatch.vercel.app");
   const tweetLink = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareURL}`;
 
   return (
@@ -102,11 +103,11 @@ export default function App() {
 
       {/* Title */}
       <div className="title">
-        <img src="/recall-logo.png" alt="RecallNet Logo" className="title-logo" />
-        <span>Recallnet Team Flip</span>
+        <img src="/cysic-logo.png" alt="cysic Logo" className="title-logo" />
+        <span>Cysic Team Flip</span>
       </div>
 
-      <h2 className="subtitle">How well can you recall the @recallnet team? Let's play...</h2>
+      <h2 className="subtitle">How well do you know the @cysic_xyz team? Let's play...</h2>
 
       {hasWon && (
         <>
@@ -134,7 +135,7 @@ export default function App() {
               >
                 <div className="inner">
                   <div className="front">
-                    <img src="/recall-logo.png" alt="Recall Logo" className="recall-logo" />
+                    <img src="/cysic-logo.png" alt="cysic Logo" className="cysic-logo" />
                   </div>
                   <div className="back">
                     <img src={agent.image} alt={agent.name} />
@@ -159,7 +160,7 @@ export default function App() {
         </a>{" "}
         for{" "}
         <a
-          href="https://twitter.com/recallnet"
+          href="https://twitter.com/cysic_xyz"
           target="_blank"
           rel="noopener noreferrer"
           className="highlight"
